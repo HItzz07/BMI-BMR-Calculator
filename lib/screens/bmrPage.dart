@@ -282,7 +282,7 @@ class _BMRPageState extends State<BMRPage> {
                   child:ReusableCard(
                     cardChild: DropdownButton<String>(
                       value: dropDownValue,
-                      hint: Text(' Select Your Choice          '),
+                      hint: Text(' Select Your Choice        '),
 //                  disabledHint:disabledHintData,
                       focusColor: Colors.green,
                       iconEnabledColor: Colors.greenAccent,
@@ -307,7 +307,7 @@ class _BMRPageState extends State<BMRPage> {
                         );
                       }).toList(),
                     ),
-                    colour: Colors.grey,
+                    colour: Color(0xFF444544),
                   ),
 
                 ),
