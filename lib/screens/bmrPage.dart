@@ -150,6 +150,10 @@ class _BMRPageState extends State<BMRPage> {
                                       'WEIGHT',
                                       style: kLabelTextStyle,
                                     ),
+                                    Text(
+                                      weight.toString(),
+                                      style: kNumberTextStyle,
+                                    ),
                                     Center(
                                       child: Row(
                                         mainAxisAlignment:
@@ -164,14 +168,7 @@ class _BMRPageState extends State<BMRPage> {
                                             },
                                           ),
                                           SizedBox(
-                                            width: 10.0,
-                                          ),
-                                          Text(
-                                            weight.toString(),
-                                            style: kNumberTextStyle,
-                                          ),
-                                          SizedBox(
-                                            width: 10.0,
+                                            width: 30.0,
                                           ),
                                           RoundIconButton(
                                             icon: FontAwesomeIcons.plus,
@@ -188,6 +185,7 @@ class _BMRPageState extends State<BMRPage> {
                                 ),
                               ),
                             ),
+
                             Expanded(
                               child: ReusableCard(
                                 colour: kActiveCardColor,
@@ -198,10 +196,13 @@ class _BMRPageState extends State<BMRPage> {
                                       'AGE',
                                       style: kLabelTextStyle,
                                     ),
+                                    Text(
+                                      age.toString(),
+                                      style: kNumberTextStyle,
+                                    ),
                                     Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: <Widget>[
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
                                         RoundIconButton(
                                           icon: FontAwesomeIcons.minus,
                                           onPressed: () {
@@ -210,15 +211,12 @@ class _BMRPageState extends State<BMRPage> {
                                             });
                                           },
                                         ),
+                                        // SizedBox(
+                                        //   width: 10.0,
+                                        // ),
+
                                         SizedBox(
-                                          width: 10.0,
-                                        ),
-                                        Text(
-                                          age.toString(),
-                                          style: kNumberTextStyle,
-                                        ),
-                                        SizedBox(
-                                          width: 20.0,
+                                          width: 30.0,
                                         ),
                                         RoundIconButton(
                                           icon: FontAwesomeIcons.plus,
@@ -302,7 +300,7 @@ class _BMRPageState extends State<BMRPage> {
                         child: ReusableCard(
                           cardChild: DropdownButton<String>(
                             value: dropDownValue,
-                            hint: Text(' Select Your Choice        '),
+                            hint: Text(' Select Your Choice'),
 //                  disabledHint:disabledHintData,
                             focusColor: Colors.green,
                             iconEnabledColor: Colors.greenAccent,
