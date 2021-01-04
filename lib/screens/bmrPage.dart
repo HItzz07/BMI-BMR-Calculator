@@ -150,10 +150,6 @@ class _BMRPageState extends State<BMRPage> {
                                       'WEIGHT',
                                       style: kLabelTextStyle,
                                     ),
-                                    Text(
-                                      weight.toString(),
-                                      style: kNumberTextStyle,
-                                    ),
                                     Center(
                                       child: Row(
                                         mainAxisAlignment:
@@ -167,9 +163,16 @@ class _BMRPageState extends State<BMRPage> {
                                               });
                                             },
                                           ),
-                                          SizedBox(
-                                            width: 30.0,
+                                          // SizedBox(
+                                          //   width: 5,
+                                          // ),
+                                          Text(
+                                            weight.toString(),
+                                            style: kNumberTextStyle,
                                           ),
+                                          // SizedBox(
+                                          //   width: 5,
+                                          // ),
                                           RoundIconButton(
                                             icon: FontAwesomeIcons.plus,
                                             onPressed: () {
@@ -196,10 +199,6 @@ class _BMRPageState extends State<BMRPage> {
                                       'AGE',
                                       style: kLabelTextStyle,
                                     ),
-                                    Text(
-                                      age.toString(),
-                                      style: kNumberTextStyle,
-                                    ),
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
@@ -212,12 +211,15 @@ class _BMRPageState extends State<BMRPage> {
                                           },
                                         ),
                                         // SizedBox(
-                                        //   width: 10.0,
+                                        //   width: 5,
                                         // ),
-
-                                        SizedBox(
-                                          width: 30.0,
+                                        Text(
+                                          age.toString(),
+                                          style: kNumberTextStyle,
                                         ),
+                                        // SizedBox(
+                                        //   width: 5,
+                                        // ),
                                         RoundIconButton(
                                           icon: FontAwesomeIcons.plus,
                                           onPressed: () {

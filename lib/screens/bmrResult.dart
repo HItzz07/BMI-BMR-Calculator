@@ -58,6 +58,7 @@ class BMRResultsPage extends StatelessWidget {
                             child: Text(
                               resultText.toUpperCase(),
                               style: kResultTextStyle,
+                              textAlign: TextAlign.center,
                             ),
                           ),
                           Center(
