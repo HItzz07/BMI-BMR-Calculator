@@ -5,11 +5,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../components/icon_content.dart';
 import '../components/reusable_card.dart';
 import '../constants.dart';
-import 'results_page.dart';
+import 'bmiResult.dart';
 import '../components/round_icon_button.dart';
 import '../components/bottom_button.dart';
-import 'package:bmicalc/calculator_brain.dart';
-import 'package:bmicalc/screens/input_page.dart';
+import 'package:bmicalc/bmi_brain.dart';
+import 'package:bmicalc/screens/bmiPage.dart';
 import 'package:bmicalc/screens/bmrPage.dart';
 
 class InputPage1 extends StatefulWidget {
@@ -39,7 +39,7 @@ class _InputPage1State extends State<InputPage1> {
                 onPress: (){
                     Navigator.push(
                     context ,
-                    MaterialPageRoute(builder: (context) => InputPage()),
+                    MaterialPageRoute(builder: (context) => BMIPage()),
                     );
                 },
           ),
@@ -77,7 +77,7 @@ class _InputPage1State extends State<InputPage1> {
                       onPress: (){
                         Navigator.push(
                           context ,
-                          MaterialPageRoute(builder: (context) => InputPage()),
+                          MaterialPageRoute(builder: (context) => BMIPage()),
                         );
                       },
                       colour: Colors.amber,

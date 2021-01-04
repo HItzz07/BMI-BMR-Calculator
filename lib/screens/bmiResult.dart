@@ -1,14 +1,13 @@
 import 'package:bmicalc/constants.dart';
 import 'package:bmicalc/components/reusable_card.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../constants.dart';
 import '../components/bottom_button.dart';
 
-class BMRResultsPage extends StatelessWidget {
+class ResultsPage extends StatelessWidget {
 
-  BMRResultsPage({@required this.bmrResult,@required this.resultText,@required this.interpretation });
-  final String bmrResult;
+    ResultsPage({@required this.bmiResult,@required this.resultText,@required this.interpretation });
+  final String bmiResult;
   final String resultText;
   final String interpretation;
 
@@ -18,7 +17,7 @@ class BMRResultsPage extends StatelessWidget {
     double wdth = MediaQuery.of(context).size.width;
     double hght = MediaQuery.of(context).size.height;
     var padding = MediaQuery.of(context).padding;
-    hght = hght - padding.top - padding.bottom - 60;
+    hght = hght - padding.top - padding.bottom-60;
     ht = hght - wdth;
     if(ht < 0 ) ht = -1*ht;
     if(ht < 200 ) hght = 2*wdth;
@@ -26,7 +25,7 @@ class BMRResultsPage extends StatelessWidget {
     return Scaffold(
       appBar:AppBar(
       ),
-      body: GestureDetector(
+      body:GestureDetector(
         onPanUpdate: (details){
           if(details.delta.dx > 15) Navigator.pop(context);
         },
@@ -39,12 +38,10 @@ class BMRResultsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  Expanded(
-                    child: Center(
-                      child: Text(
-                        'Your Result',
-                        style: kTitleTextStyle,
-                      ),
+                  Center(
+                    child: Text(
+                      'Your Result',
+                      style: kTitleTextStyle,
                     ),
                   ),
                   Expanded(
@@ -62,22 +59,13 @@ class BMRResultsPage extends StatelessWidget {
                           ),
                           Center(
                             child: Text(
-                              bmrResult,
+                              bmiResult,
                               style: kBMITextStyle,
                             ),
                           ),
                           Text(
-                            "kcal",
-                            style: TextStyle(
-                              fontSize: 50,
-                              fontWeight: FontWeight.bold,
-                              height: -6.5,
-                              color: Colors.white70,
-                            ),
-                          ),
-                          Text(
-                            interpretation.toUpperCase(),
-                            style: kResultTextStyle,
+                            interpretation,
+                            style: kBodyTextStyle,
                             textAlign: TextAlign.center,
                           )
                         ],
@@ -91,6 +79,8 @@ class BMRResultsPage extends StatelessWidget {
                       onTap: (){
                         Navigator.pop(context);
                       },
+
+
                     ),
                   ),
                 ],
@@ -99,6 +89,6 @@ class BMRResultsPage extends StatelessWidget {
           ],
         ),
       ),
-    );
+      );
   }
 }

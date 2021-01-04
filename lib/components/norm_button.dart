@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
-import '../screens/results_page.dart';
-import 'package:bmicalc/screens/input_page.dart';
+import '../screens/bmiResult.dart';
+import 'package:bmicalc/screens/bmiPage.dart';
 
 class NormButton extends StatelessWidget {
   final String buttonTitle = '';
